@@ -1,4 +1,5 @@
 class FilmsController < ApplicationController
+  before_action :find_film, only: [:show, :edit, :update, :destroy]
   
   def index
     @films = Film.all
@@ -15,22 +16,22 @@ class FilmsController < ApplicationController
   end
 
   def show
-    @film = Film.find(params[:id])
-     @opinions = Opinion.all.select { |f| f.film_id == @film.id }
+    
+    @opinions = Opinion.all.select { |f| f.film_id == @film.id }
   end
 
   def edit
-    @film = Film.find(params[:id])
+    
   end
 
   def update
-    @film = Film.find(params[:id])
+    
     @film.update(film_params)
     redirect_to films_path
   end
   
   def destroy
-    @film = Film.find(params[:id])
+    
     @film.destroy
     redirect_to films_path
   end
@@ -38,4 +39,9 @@ class FilmsController < ApplicationController
   def film_params
     params.require(:film).permit(:title, :description)
   end
+
+  def find_film
+    @film = Film.find(params[:id])
+  end
+
 end
