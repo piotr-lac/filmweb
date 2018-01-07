@@ -8,6 +8,10 @@ class FilmsController < ApplicationController
     @film = Film.new
   end
 
+  def create
+    @film = Film.new(film_params)
+    @film.save
+  end
 
   def show
   end
@@ -21,8 +25,7 @@ class FilmsController < ApplicationController
   def update
   end
 
-
-  def create
+  def film_params
+    params.require(:film).permit(:title,:description)
   end
-
 end
