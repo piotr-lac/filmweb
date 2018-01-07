@@ -16,6 +16,7 @@ class FilmsController < ApplicationController
 
   def show
     @film = Film.find(params[:id])
+     @opinions = Opinion.all.select { |f| f.film_id == @film.id }
   end
 
   def edit

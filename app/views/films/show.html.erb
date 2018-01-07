@@ -8,3 +8,18 @@
 
 <p><%= link_to "Edytuj", edit_film_path(@film.id) %></p> 
 <p><%= link_to "Katalog filmów", films_path %> </p> 
+
+<p> 
+  <table>
+  <th> Nick </th>
+  <th> Recenzja </th>
+  <th> Rating </th>
+  <% @opinions.each do |opinion| %>
+    <tr>
+      <td> <%= opinion.nick %> </td>
+      <td> <%= opinion.review %> </td>
+      <td> <%= opinion.rating %> </td>
+    </tr>
+  <% end %>
+</table>
+</p>

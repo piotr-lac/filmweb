@@ -1,6 +1,8 @@
 class OpinionsController < ApplicationController
   def index
-    @opinions = Opinion.all
+    @film = Film.find(params[:id])
+    @opinions = Opinion.all.select { |f| f.film_id == @film.id }
+
   end
 
 

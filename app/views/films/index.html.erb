@@ -12,6 +12,7 @@
       <td> <%= link_to "Szczegóły", film_path(film.id) %>
       <td> <%= link_to "Edytuj", edit_film_path(film.id) %>
       <td> <%= link_to "Kasuj", film_path(film.id), method: :delete %>
+      <td> <%= link_to "Opinie o filmie", film_opinions_path(film.id) %>
     </tr>
   <% end %>
 </table>
