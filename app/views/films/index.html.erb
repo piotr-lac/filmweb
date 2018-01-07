@@ -9,6 +9,7 @@
     <tr>
       <td> <%= film.title %> </td>
       <td> <%= film.description %> </td>
+      <td> <%= link_to "Szczegóły", film_path(film.id) %>
     </tr>
   <% end %>
 </table>
