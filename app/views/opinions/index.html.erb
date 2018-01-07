@@ -1,0 +1,12 @@
+<table>
+  <th> Nick </th>
+  <th> Recenzja </th>
+  <th> Rating </th>
+  <% @opinions.each do |opinion| %>
+    <tr>
+      <td> <%= opinion.nick %> </td>
+      <td> <%= opinion.review %> </td>
+      <td> <%= opinion.rating %> </td>
+    </tr>
+  <% end %>
+</table>
