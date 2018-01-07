@@ -1,0 +1,13 @@
+<h1> Dodaj recenzje</h1>
+
+<%= form_for([@film,@opinion]) do |f| %>
+  <p>
+    <% f.label :nick %> Nick
+    <%= f.text_field :nick %>
+  </p>
+  <p>
+    <% f.label :review %> Recencja
+    <%= f.text_area :review %>
+  </p>
+<%= f.submit %>
+<% end %>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#home'
 
   resources :films do 
-    resources :opinions, only: [:index, :new, :create]
+    resources :opinions
   end
 
   

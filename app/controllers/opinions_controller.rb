@@ -5,5 +5,9 @@ class OpinionsController < ApplicationController
     @opinions = Opinion.all.select { |f| f.film_id == @film.id }
   end
 
+  def new
+    @opinion = Opinion.new
+  end
+
 
 end
