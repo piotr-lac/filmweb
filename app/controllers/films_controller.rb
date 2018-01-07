@@ -19,15 +19,19 @@ class FilmsController < ApplicationController
   end
 
   def edit
-  end
-
-  def destroy
+    @film = Film.find(params[:id])
   end
 
   def update
+    @film = Film.find(params[:id])
+    @film.update(film_params)
+    redirect_to films_path
+  end
+  
+  def destroy
   end
 
   def film_params
-    params.require(:film).permit(:title,:description)
+    params.require(:film).permit(:title, :description)
   end
 end

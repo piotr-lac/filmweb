@@ -1,1 +1,13 @@
 <h1>Edytuj szczegóły filmu - edit</h1>
+
+<%= form_for @film do |f| %>
+  <p>
+    <% f.label :title %> Tytuł
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <% f.label :description %> Opis
+    <%= f.text_area :description %>
+  </p>
+<%= f.submit %>
+<% end %>
