@@ -4,6 +4,11 @@ class FilmsController < ApplicationController
     @films = Film.all
   end
 
+  def new
+    @film = Film.new
+  end
+
+
   def show
   end
 
@@ -16,9 +21,6 @@ class FilmsController < ApplicationController
   def update
   end
 
-  def new
-    @film = Film.new
-  end
 
   def create
   end
