@@ -11,6 +11,7 @@
       <td> <%= film.description %> </td>
       <td> <%= link_to "Szczegóły", film_path(film.id) %>
       <td> <%= link_to "Edytuj", edit_film_path(film.id) %>
+      <td> <%= link_to "Kasuj", film_path(film.id), method: :delete %>
     </tr>
   <% end %>
 </table>

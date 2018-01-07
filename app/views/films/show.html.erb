@@ -5,4 +5,6 @@
 <p> Opis : </p>
 <%= @film.description %>
 
+
+<p><%= link_to "Edytuj", edit_film_path(@film.id) %></p> 
 <p><%= link_to "Katalog filmów", films_path %> </p> 

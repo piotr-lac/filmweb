@@ -29,6 +29,9 @@ class FilmsController < ApplicationController
   end
   
   def destroy
+    @film = Film.find(params[:id])
+    @film.destroy
+    redirect_to films_path
   end
 
   def film_params
