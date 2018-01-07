@@ -1,1 +1,14 @@
 <h1>Katalog filmów - index</h1>
+
+<p> <%= link_to "Dodaj nowy film do bazy", new_film_path %> </p>
+
+<table>
+  <th> Tytuł </th>
+  <th> Opis </th>
+  <% @films.each do |film| %>
+    <tr>
+      <td> <%= film.title %> </td>
+      <td> <%= film.description %> </td>
+    </tr>
+  <% end %>
+</table>
