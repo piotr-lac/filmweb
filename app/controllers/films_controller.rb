@@ -16,7 +16,6 @@ class FilmsController < ApplicationController
   end
 
   def show
-    
     @opinions = Opinion.all.select { |f| f.film_id == @film.id }
   end
 
@@ -25,13 +24,11 @@ class FilmsController < ApplicationController
   end
 
   def update
-    
     @film.update(film_params)
     redirect_to films_path
   end
   
   def destroy
-    
     @film.destroy
     redirect_to films_path
   end
