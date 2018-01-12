@@ -6,11 +6,16 @@
   <th> Tytuł </th>
   <th> Opis </th>
   <th> Liczba opinii </th>
+  <th> Rating </th>
   <% @films.each do |film| %>
     <tr>
       <td> <%= film.title %> </td>
       <td> <%= film.description %> </td>
-      <td> <%= film.opinions.all.length %> </td>
+      <td> <% @number = film.opinions.all.length %> 
+       <%= @number %> </td>
+      <td> <% @sum = [] %>
+          <% film.opinions.each { |op| @sum << op.rating } %>
+          <%= (@sum.sum.to_f/@number).round(1) %></td>
       <td> <%= link_to "Szczegóły", film_path(film.id) %>
       <td> <%= link_to "Edytuj", edit_film_path(film.id) %>
       <td> <%= link_to "Kasuj", film_path(film.id), method: :delete %>
