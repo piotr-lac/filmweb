@@ -25,7 +25,7 @@ class FilmsController < ApplicationController
 
   def update
     @film.update(film_params)
-    redirect_to films_path
+    redirect_to film_path
   end
   
   def destroy
