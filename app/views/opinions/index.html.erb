@@ -1,17 +1,8 @@
-<h1>Opinie o filmie</h1>
+<h1>Opinie o filmie </h1>
 
-<%= render 'opinions/opinion' %>
+<p> <%= render 'opinions/form' %> </p>
 
-<!-- <table>
-  <th> Nick </th>
-  <th> Recenzja </th>
-  <th> Rating </th>
-  <% @opinions.each do |opinion| %>
-    <tr>
-      <td> <%= opinion.nick %> </td>
-      <td> <%= opinion.review %> </td>
-      <td> <%= opinion.rating %> </td>
-    </tr>
-  <% end %>
-</table> -->
+
+<p> <%= render 'opinions/opinion' %> </p>
+
 <p><%= link_to "Wróć do filmu", film_path(@film.id) %></p>

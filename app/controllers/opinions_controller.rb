@@ -3,6 +3,7 @@ class OpinionsController < ApplicationController
   def index
     @film = Film.find(params[:film_id])
     @opinions = Opinion.all.select { |f| f.film_id == @film.id }
+    @opinion = Opinion.new
     
   end
 
@@ -22,7 +23,6 @@ class OpinionsController < ApplicationController
   end
 
   def destroy
-    
     @opinion = Opinion.find(params[:id])
     @opinion.destroy
     redirect_to film_path(@opinion.film_id)
