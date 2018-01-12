@@ -21,6 +21,13 @@ class OpinionsController < ApplicationController
     redirect_to film_path(@film.id)
   end
 
+  def destroy
+    @opinion = Opinion.find(params[:id])
+    @opinion.destroy
+    redirect_to films_path
+  end
+
+
   def opinion_params
     params.require(:opinion).permit(:nick, :review, :rating, :film_id)
   end

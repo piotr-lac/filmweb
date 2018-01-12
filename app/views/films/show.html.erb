@@ -17,12 +17,14 @@
   <table>
   <th> Nick </th>
   <th> Recenzja </th>
-  <th> Rating </th>
+  <th> Rating Usera</th>
+  <th> Skasuj </th>
   <% @opinions.each do |opinion| %>
     <tr>
       <td> <%= opinion.nick %> </td>
       <td> <%= opinion.review %> </td>
       <td> <%= opinion.rating %> </td>
+      <td> <%= link_to "skasuj", film_opinion_path(opinion.film, opinion), method: :delete %> </td>
     </tr>
   <% end %>
 </table>
