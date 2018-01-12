@@ -22,9 +22,10 @@ class OpinionsController < ApplicationController
   end
 
   def destroy
+    
     @opinion = Opinion.find(params[:id])
     @opinion.destroy
-    redirect_to films_path
+    redirect_to film_path(@opinion.film_id)
   end
 
 
