@@ -1,6 +1,8 @@
 <h1>Opinie o filmie</h1>
 
-<table>
+<%= render 'opinions/opinion' %>
+
+<!-- <table>
   <th> Nick </th>
   <th> Recenzja </th>
   <th> Rating </th>
@@ -11,4 +13,5 @@
       <td> <%= opinion.rating %> </td>
     </tr>
   <% end %>
-</table>
+</table> -->
+<p><%= link_to "Wróć do filmu", film_path(@film.id) %></p>

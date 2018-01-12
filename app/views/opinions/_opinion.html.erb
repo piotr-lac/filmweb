@@ -1,22 +1,4 @@
-<h1>Pokaż szczegóły filmu - show</h1>
-<p><%= link_to "Katalog filmów", films_path %> </p> 
-
-
-<p> Tytuł: </p>
-<%= @film.title %>
-<p> Opis : </p>
-<%= @film.description %>
-
-
-<p> <%= link_to "Edytuj", edit_film_path(@film.id) %> </p> 
-<p> <%= link_to "Dodaj recenzję", new_film_opinion_path(@film.id) %> </p> 
-
-
-
-<p> 
-
-<%= render 'opinions/opinion' %>
- <!--  <table>
+ <table>
   <th> Nick </th>
   <th> Recenzja </th>
   <th> Rating Usera</th>
@@ -29,5 +11,4 @@
       <td> <%= link_to "skasuj", film_opinion_path(opinion.film, opinion), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
     </tr>
   <% end %>
-</table> -->
-</p>
+</table>
